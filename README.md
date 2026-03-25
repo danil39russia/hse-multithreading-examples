@@ -1,3 +1,15 @@
+Отчет на дз 3:
+
+<img width="539" height="179" alt="image" src="https://github.com/user-attachments/assets/288db416-0d4c-427f-a8ea-59fbd1333867" />
+
+
+Сделан FutexMutex (аналог std::mutex) в tasks/futex: lock/try_lock/unlock через futex на Linux.
+В test.cpp два простых сценария (стресс-счётчик и проверка try_lock) + вывод в консоль All futex mutex checks passed.
+
+вывод в консоль просто потому что люблю визуализация, а то код 0 - пустоватенький
+
+Отчет на дз 2:
+
 <img width="779" height="574" alt="image" src="https://github.com/user-attachments/assets/05dfb2ca-c0f4-46b8-a30c-c541820bd351" />
 
 Реализован буферизованный канал (FIFO, ёмкость n): Send кладёт в конец очереди и блокируется при полном буфере; Recv забирает с головы и блокируется при пустой очереди; Close запрещает дальнейшие Send (std::runtime_error) и после опустошения буфера Recv возвращает пустой std::optional. Синхронизация: mutex + два condition_variable. Тесты (gtest) и бенчмарк проходят, время бенчмарка < 8 с.
