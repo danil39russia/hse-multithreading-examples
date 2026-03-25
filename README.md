@@ -1,3 +1,13 @@
+Отчет на дз 4:
+
+<img width="782" height="367" alt="image" src="https://github.com/user-attachments/assets/68d3ff24-564f-4700-8449-6c28bb4707ac" />
+
+
+Реализована lock-free MPSC очередь сообщений в разделяемой памяти (shm_open + mmap) на основе кольцевого буфера.
+Добавлен протокол: общий заголовок сообщения (type, length) и метаданные версии/формата в shared memory.
+Сделаны две отдельные программы: ProducerNode (инициализация и отправка) и ConsumerNode (чтение только заданного типа, остальные сообщения отбрасываются).
+Работоспособность подтверждена запуском двух разных процессов: producer отправляет сообщения и DONE, consumer корректно получает только type=1 и завершает работу.
+
 Отчет на дз 3:
 
 <img width="539" height="179" alt="image" src="https://github.com/user-attachments/assets/288db416-0d4c-427f-a8ea-59fbd1333867" />
